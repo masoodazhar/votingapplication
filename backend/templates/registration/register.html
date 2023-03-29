@@ -25,10 +25,7 @@
     .topNav{
       background-color: #00b39b !important;
     }
-    #div_id_username{
-      text-align: left;
-    }
-    #div_id_password{
+    form{
       text-align: left;
     }
 </style>
@@ -69,10 +66,8 @@
             
 
               <!-- Email input -->
-              {{form.username|as_crispy_field}}
+              {{form|crispy}}
 
-              <!-- Password input -->
-              {{form.password|as_crispy_field}}
 
               <!-- Checkbox -->
               <div class="form-check d-flex justify-content-center mb-4">
@@ -98,9 +93,24 @@
               </button>
 
               <!-- Register buttons -->
-              <div class="text-center">
-                <a href="{% url 'userAuth:register' %}">Register Here</a>
-              </div>
+              <!-- <div class="text-center">
+                <p>or sign up with:</p>
+                <button type="button" class="btn btn-link btn-floating mx-1">
+                  <i class="fab fa-facebook-f"></i>
+                </button>
+
+                <button type="button" class="btn btn-link btn-floating mx-1">
+                  <i class="fab fa-google"></i>
+                </button>
+
+                <button type="button" class="btn btn-link btn-floating mx-1">
+                  <i class="fab fa-twitter"></i>
+                </button>
+
+                <button type="button" class="btn btn-link btn-floating mx-1">
+                  <i class="fab fa-github"></i>
+                </button>
+              </div> -->
             </form>
           </div>
         </div>

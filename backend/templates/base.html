@@ -131,12 +131,12 @@
     <!-- Top fixed navigation -->
     <div class="topNav">
         <div class="wrapper">
-            <div class="welcome"><a href="#" title=""><img src="{% static 'images/userPic.png' %}" alt="" /></a><span>Howdy, Eugene!</span></div>
+            <div class="welcome"><a href="#" title=""><img src="{% static 'images/userPic.png' %}" alt="" /></a><span>{{user.username}}</span></div>
             <div class="userNav">
                 <ul>
                     <li><a href="#" title=""><img src="{% static 'images/icons/topnav/profile.png' %}" alt="" /><span>Profile</span></a></li>
                     <li><a href="#" title=""><img src="{% static 'images/icons/topnav/tasks.png' %}" alt="" /><span>Tasks</span></a></li>
-                    <li class="dd"><a title=""><img src="{% static 'images/icons/topnav/messages.png' %}" alt="" /><span>Messages</span><span class="numberTop">8</span></a>
+                    <li class="dd"><a title=""><img src="{% static 'images/icons/topnav/messages.png' %}" alt="" /><span>Messages</span><span class="numberTop">0</span></a>
                         <ul class="userDropdown">
                             <li><a href="#" title="" class="sAdd">new message</a></li>
                             <li><a href="#" title="" class="sInbox">inbox</a></li>
@@ -171,12 +171,12 @@
                         <li class="last"><a href="form_wizards.html" title="">Wizards</a></li>
                     </ul>
                 </li>
-                <li><a href="ui_elements.html" title=""><img src="{% static 'images/icons/light/users.png' %}" alt="" />Interface elements</a></li>
-                <li><a href="tables.html" title="" class="exp"><img src="{% static 'images/icons/light/frames.png' %}" alt="" />Tables<strong>3</strong></a>
+                <li><a href="#" title=""><img src="{% static 'images/icons/light/users.png' %}" alt="" />Interface elements</a></li>
+                <li><a href="#" title="" class="exp"><img src="{% static 'images/icons/light/frames.png' %}" alt="" />Tables<strong>3</strong></a>
                     <ul>
-                        <li><a href="table_static.html" title="">Static tables</a></li>
-                        <li><a href="table_dynamic.html" title="">Dynamic table</a></li>
-                        <li class="last"><a href="table_sortable_resizable.html" title="">Sortable &amp; resizable tables</a></li>
+                        <li><a href="#" title="">Static tables</a></li>
+                        <li><a href="#" title="">Dynamic table</a></li>
+                        <li class="last"><a href="#" title="">Sortable &amp; resizable tables</a></li>
                     </ul>
                 </li>
                 <li><a href="#" title="" class="exp"><img src="{% static 'images/icons/light/fullscreen.png' %}" alt="" />Widgets and grid<strong>2</strong></a>
