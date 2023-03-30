@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from . forms import UserRegistrationForm
 from django.contrib import messages
 from django.contrib.auth import login
+from apps.dashboard.models import Profile
 
 # for API Usage
 from rest_framework.views import APIView
@@ -25,6 +26,8 @@ def index(request):
             user = form.save()
             login(request, user)
             messages.success(request, "Registration successful." )
+            profile = Profile(user=request.user)
+            profile.save()
             return redirect("dashboard:index")
         messages.error(request, "Unsuccessful registration. Invalid information.")
     else:   
@@ -46,8 +49,9 @@ class LoginAPIView(APIView):
         )
         if user is not None:
             refresh = RefreshToken.for_user(user)
-            return Response({'token': str(refresh.access_token)})
+            return Response({'access_token': str(refresh.access_token), 'refresh_token': str(refresh)})
         return Response({'detail': 'Invalid credentials'}, status=status.HTTP_401_UNAUTHORIZED)
+        
 
 # frontend Register Class API
 class RegisterAPIView(generics.GenericAPIView):
