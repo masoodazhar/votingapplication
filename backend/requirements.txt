@@ -2,3 +2,5 @@ django==3.2.18
 pillow
 django-crispy-forms
 crispy-bootstrap5
+djangorestframework
+djangorestframework-simplejwt

@@ -25,3 +25,7 @@ class VoteChoice(models.Model):
     
     def __str__(self):
         return self.text
+
+class Profile(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    votes = models.ManyToManyField(Vote, blank=True)
