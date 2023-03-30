@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block css %}
+<style>
+    .previous_button{
+        position: absolute;
+        left: 0;
+        margin-top: 25%;
+        border-top-right-radius: 30px;
+        border-bottom-right-radius: 30px;
+        border-top: 1px white solid;
+        background: #068ff1;
+        color: white;
+        border-right: 1px white solid;
+        border-bottom: 1px white solid;
+        border-left: 0px;
+        font-size: 46px;
+        padding-bottom: 30px;
+        vertical-align: middle;
+        padding-top: 20px;
+    }
+    .next_button{
+        vertical-align: middle;
+        position: absolute;
+        right: 0;
+        margin-top: 25%;
+        border-top-left-radius: 30px;
+        border-bottom-left-radius: 30px;
+        border-top: 1px white solid;
+        background: #068ff1;
+        color: white;
+        border-left: 1px white solid;
+        border-bottom: 1px white solid;
+        border-right: 0px;
+        font-size: 46px;
+        padding-bottom: 30px;
+        padding-top: 20px;
+    }
+    .modal{
+        max-width: 90% !important;
+        display: flex;
+    }
+    .card-header{
+        height: 5px !important;
+    }
+    .card-body{
+        padding: 0px !important;
+    }
+    .gallery {
+        margin: auto;
+        padding: 0px 0% 0px 0% !important;
+        text-align: center;
+    }
+    p.time_stamp {
+        margin-top: -20px !important;
+    }
+</style>
+{% endblock %}
+{% block page_name %} Store Cams - images {% endblock %}
+{% block body %}
+<div class="wrapper">
+    <form  class="form" method="post">
+        <fieldset>
+            <div class="widget">
+                <div class="title"><img src="{% static 'images/icons/dark/list.png' %}" alt="" class="titleIcon" /><h6>Are you sure you want to delete "{{ vote.question }}"?</h6></div>
+                <div class="formRow fluid">                   
+                    <h1>Delete Vote</h1>
+                    {% csrf_token %}
+                    <button type="submit">Yes</button>
+                    <a href="{% url 'dashboard' %}">No</a>
+                
+                </div>                
+            </div>
+        </fieldset>
+    </form>
+
+</div>
+{% endblock %}
