@@ -112,12 +112,10 @@
     <ul id="menu" class="nav">
         <li class="dash"><a href="{% url 'dashboard:index' %}" title="" class="active"><span>Dashboard</span></a></li>
       
-        <li class="forms"><a href="#" title="" class="exp"><span>surveillance</span><strong>3</strong></a>
+        <li class="forms"><a href="#" title="" class="exp"><span>Manage Vote</span><strong>3</strong></a>
             <ul class="sub">
-                <li><a href="" title="">Store Cams</a></li>
+                <li><a href="{% url 'dashboard:create_vote' %}" title="">Create Votes</a></li>
                 <li><a href="" title="">Selection Streams</a></li>
-                <li><a href="" title="">Transactional Streams</a></li>
-                <li><a href="#" title="">Anomaly Streams</a></li>
             </ul>
         </li>
         <li class="charts"><a href="" title=""><span>Sales Forecasting</span></a></li>
@@ -154,7 +152,7 @@
     <!-- Responsive header -->
     <div class="resp">
         <div class="respHead">
-            <a href="index-2.html" title=""><img src="{% static 'images/loginLogo.png' %}" alt="" /></a>
+            <a href="{% url 'dashboard:index' %}" title=""><img src="{% static 'images/loginLogo.png' %}" alt="" /></a>
         </div>
         
         <div class="cLine"></div>
@@ -172,37 +170,7 @@
                     </ul>
                 </li>
                 <li><a href="#" title=""><img src="{% static 'images/icons/light/users.png' %}" alt="" />Interface elements</a></li>
-                <li><a href="#" title="" class="exp"><img src="{% static 'images/icons/light/frames.png' %}" alt="" />Tables<strong>3</strong></a>
-                    <ul>
-                        <li><a href="#" title="">Static tables</a></li>
-                        <li><a href="#" title="">Dynamic table</a></li>
-                        <li class="last"><a href="#" title="">Sortable &amp; resizable tables</a></li>
-                    </ul>
-                </li>
-                <li><a href="#" title="" class="exp"><img src="{% static 'images/icons/light/fullscreen.png' %}" alt="" />Widgets and grid<strong>2</strong></a>
-                    <ul>
-                        <li><a href="widgets.html" title="">Widgets</a></li>
-                        <li class="last"><a href="grid.html" title="">Grid</a></li>
-                    </ul>
-                </li>
-                <li><a href="#" title="" class="exp"><img src="{% static 'images/icons/light/alert.png' %}" alt="" />Error pages<strong>6</strong></a>
-                    <ul class="sub">
-                        <li><a href="403.html" title="">403 page</a></li>
-                        <li><a href="404.html" title="">404 page</a></li>
-                        <li><a href="405.html" title="">405 page</a></li>
-                        <li><a href="500.html" title="">500 page</a></li>
-                        <li><a href="503.html" title="">503 page</a></li>
-                        <li class="last"><a href="offline.html" title="">Website is offline</a></li>
-                    </ul>
-                </li>
-                <li><a href="file_manager.html" title=""><img src="{% static 'images/icons/light/files.png' %}" alt="" />File manager</a></li>
-                <li><a href="#" title="" class="exp"><img src="{% static 'images/icons/light/create.png' %}" alt="" />Other pages<strong>3</strong></a>
-                    <ul>
-                        <li><a href="typography.html" title="">Typography</a></li>
-                        <li><a href="calendar.html" title="">Calendar</a></li>
-                        <li class="last"><a href="gallery.html" title="">Gallery</a></li>
-                    </ul>
-                </li>
+                
             </ul>
         </div>
         <div class="cLine"></div>
